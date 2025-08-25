@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AWS S3 Next.js File Explorer
 
-## Getting Started
+This is a **Next.js 15** project that allows users to **upload, view, download, and delete files** from an AWS S3 bucket.  
+Authentication is handled with **Clerk** for secure user login.
 
-First, run the development server:
+🔗 **Live Demo:** https://aws-s3-nextjs-aup0yecbr-rafay0704s-projects.vercel.app/
 
+---
+
+## 🚀 Features
+
+- 🔑 **Authentication** with Clerk  
+- 📂 **File Management**  
+  - Upload files to AWS S3  
+  - Download files via presigned URLs  
+  - Delete files directly from S3  
+- 🗂️ **Folder Management**  
+  - Navigate folders and subfolders  
+  - Upload files to specific folders  
+- ⚡ **Real-time File Explorer UI** with preview for images and text files  
+- 🖥️ **Serverless API Routes** to handle S3 operations  
+
+---
+
+🛠️ Tech Stack
+
+Next.js 15 (App Router)
+
+Clerk (Authentication)
+
+AWS S3 (File storage)
+
+Serverless Functions for S3 operations
+
+
+## ⚙️ Getting Started
+
+### 1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+git clone https://github.com/rafay0704/aws-s3-clerk-next-js
+cd aws-s3-clerk-next-js
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Install dependencies
+pnpm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+Configure environment variables
 
-To learn more about Next.js, take a look at the following resources:
+Create a .env.local file in the root and add:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+NEXT_PUBLIC_CLERK_FRONTEND_API=<your-clerk-frontend-api>
+CLERK_API_KEY=<your-clerk-api-key>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+AWS_REGION=<your-aws-region>
+AWS_BUCKET_NAME=<your-s3-bucket-name>
+AWS_ACCESS_KEY=<your-aws-access-key>
+AWS_SECRET_ACCESS_KEY=<your-aws-secret-access-key>
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Run the development server
+pnpm run dev
