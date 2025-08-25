@@ -3,8 +3,7 @@
 This is a **Next.js 15** project that allows users to **upload, view, download, and delete files** from an AWS S3 bucket.  
 Authentication is handled with **Clerk** for secure user login.
 
-🔗 **Live Demo:** https://aws-s3-nextjs-aup0yecbr-rafay0704s-projects.vercel.app/
-
+🔗 **Live Demo:** https://aws-s3-nextjs-taupe.vercel.app/
 ---
 
 ## 🚀 Features
