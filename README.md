@@ -22,15 +22,6 @@ Authentication is handled with **Clerk** for secure user login.
 
 ---
 
-## ⚙️ Getting Started
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/rafay0704/aws-s3-clerk-next-js
-cd aws-s3-clerk-next-js
-
-
-
 🛠️ Tech Stack
 
 Next.js 15 (App Router)
@@ -42,5 +33,30 @@ AWS S3 (File storage)
 Serverless Functions for S3 operations
 
 
+## ⚙️ Getting Started
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/rafay0704/aws-s3-clerk-next-js
+cd aws-s3-clerk-next-js
+
+
 Install dependencies
 pnpm install
+
+
+Configure environment variables
+
+Create a .env.local file in the root and add:
+
+NEXT_PUBLIC_CLERK_FRONTEND_API=<your-clerk-frontend-api>
+CLERK_API_KEY=<your-clerk-api-key>
+
+AWS_REGION=<your-aws-region>
+AWS_BUCKET_NAME=<your-s3-bucket-name>
+AWS_ACCESS_KEY=<your-aws-access-key>
+AWS_SECRET_ACCESS_KEY=<your-aws-secret-access-key>
+
+
+Run the development server
+pnpm run dev
